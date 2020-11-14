@@ -16,8 +16,8 @@ public class CronJob {
         this.clockService = clockService;
     }
 
-    // TODO-03. 매초마다 실행하는 cron expression 은 "* * * * * *" 입니다.
-    // Application 시작 5초후 매초마다 printTime() 메서드를 실행하도록 스케줄링하는 애너테이션을 선언합니다.
+    // TODO-03.
+    // Application 시작 5초후 매초마다(FixedRate) 현재 시간을 출력하는 CronJob.java 코드를 완성합니다.
     public void printTime() {
         Date now = clockService.getCurrentDate();
         System.out.println(Thread.currentThread().getName() + ", Time = " + now);
