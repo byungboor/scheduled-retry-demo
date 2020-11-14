@@ -7,6 +7,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
 // TODO-01. 스케줄링 기능을 켜는 설정 Annotation 을 선언합니다.
+@EnableScheduling
 @Configuration
 public class ScheduledConfig implements SchedulingConfigurer {
 

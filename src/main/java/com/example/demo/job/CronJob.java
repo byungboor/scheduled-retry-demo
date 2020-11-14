@@ -8,6 +8,7 @@ import java.util.Date;
 
 // TODO-02.
 // 스프링 빈을 선언하는 애너테이션을 사용합니다.
+@Component
 public class CronJob {
 
     private final ClockService clockService;
@@ -18,6 +19,7 @@ public class CronJob {
 
     // TODO-03.
     // Application 시작 5초후 매초마다(FixedRate) 현재 시간을 출력하는 CronJob.java 코드를 완성합니다.
+    @Scheduled(initialDelay = 5000, fixedRate = 1000)
     public void printTime() {
         Date now = clockService.getCurrentDate();
         System.out.println(Thread.currentThread().getName() + ", Time = " + now);
